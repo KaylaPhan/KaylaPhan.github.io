@@ -1,0 +1,276 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background-color: #93adc8;
+}
+
+.container {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 1rem 10rem 2rem 10rem;
+  margin: -0.5rem;
+  scroll-margin-top: 12.2rem;
+}
+h1 {
+  font-size: 3.815rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+  text-align: center;
+  border-bottom: 3px double black;
+  padding: 1rem;
+  width: 15rem;
+  margin: 1rem auto;
+  transition: 0.5s ease-in-out;
+}
+
+h2:hover {
+  width: 25rem;
+}
+
+h3 {
+  font-size: 1.563rem;
+}
+
+p {
+  font-size: 1rem;
+  font-family: 'mulish', sans-serif;
+  line-height: calc(27/16);
+}
+
+li {
+  line-height: calc(27/16);
+}
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(90deg, rgba(61, 75, 90,0.95) 0%, rgba(61, 75, 90,0.95) 100%), url(images/beautifulToxic.jpg);
+  background-size: cover;
+  position: sticky;
+  top: -0rem;
+  padding-top: 0rem;
+  margin: -0.5rem;
+  z-index: 1;
+}
+
+.title {
+  font-family: 'Major Mono Display', monospace;
+  color: #bfd7ef;
+  transition: 0.5s ease-out;
+  padding: 0 1rem;
+}
+
+.title:hover {
+  transform: scale(1.1);
+  border-left: 5px double rgba(191, 215, 239, 1);
+  border-right: 5px double rgba(191, 215, 239, 1);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style-type: none;
+  font-family: 'times news roman' , serif;
+}
+
+nav ul a {
+  border: 1px solid #28333e;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: #5c738a;
+  font-size: 1.25rem;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+  color: black;
+  background-color: rgba(207, 231, 255, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(191, 215, 239, 0.3);
+}
+/* Header End */
+
+/* Main */
+main {
+}
+
+main p {
+  font-size: 1rem;
+}
+
+/* about */
+.about {
+  border: 1px solid #28333e;
+  border-radius: 1rem;
+  width: 60%;
+  margin: 2rem auto 5rem auto;
+  background-image: url(images/pfp2.jpg);
+  background-size: cover;
+  min-height: 30rem;
+  min-width: 50rem;
+  box-shadow: 0px 0px 10px rgba(40,51,62,0.5);
+  scroll-margin-top: 15rem;
+}
+
+.about-me-body {
+  width: 60%;
+  margin: 5rem;
+}
+
+.welcome {
+  font-family: 'times new roman', times, serif;
+  text-align: start;
+  font-size: 2.441rem;
+}
+
+.about-icons-body {
+  box-shadow: 0px 0px 15px rgba(40,51,62,0.2);
+  width: 12rem;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about-me-text {
+  font-family: 'mulish', sans-serif;
+}
+
+.about-icons {
+  margin:0 0.5rem;
+  color: black;
+  font-size: 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+
+.about-icons:hover {
+  padding: 0rem 1rem;
+  color: #4b5258;
+}
+
+/* about end */
+
+/* education */
+.education {
+  background-color: #bfd7ef;
+  background-image: linear-gradient(90deg, rgba(177, 200, 240, 0.95) 0%, rgba(177, 200, 240, 0.8) 100%), url(images/sunsetMountains.jpg);
+  background-size: cover;
+}
+
+.education-header {
+  font-family: 'times new roman', times, serif;
+}
+
+.education-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+}
+
+.education-col1 {
+  border: 1px solid black;
+  background-color: rgba(240, 236, 249, 0.5);
+  padding: 0 1rem;
+  border-radius: 5%;
+  height: 15rem;
+  box-shadow: 0px 0px 15px rgba(40,51,62,0.5);
+}
+/* education end */
+
+/* experience */
+.experience {
+  background-color: #bfd7ef;
+}
+
+.E1T1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px dotted black;
+}
+
+.E1T1-body {
+  border-bottom: 1px dotted black;
+}
+/* experience end */
+
+/* skills */
+.skills {
+  background-color: #725f85;
+}
+
+.skills-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.skills-col1, .skills-col2, .skills-col3 {
+  background-color: #6b597d;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-radius: 3%;
+  border: 1px rgba(0,0,0,0.5) solid;
+  transition: 0.5s ease-out;
+}
+
+.skills-col1:hover, .skills-col2:hover, .skills-col3:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(237, 209, 255, 0.3);
+}
+
+.skills-general, .skills-CS, .skills-lang {
+  padding: 0.5rem 2rem;
+  background-color: #5c496e;
+  border-top-right-radius: 3%;
+  border-top-left-radius: 3%;
+}
+
+.skills-body li {
+  list-style: square;
+}
+/* skills end */
+
+/* projects */
+.projects-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.scratchGame, .bioSong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #b0c9e3;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.bioSongVideo {
+  border: none;
+}
+/* projects end */
+/* Main End */
+footer {
+  
+}
