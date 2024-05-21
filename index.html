@@ -23,9 +23,28 @@
   
 <body>
 <div class="container">
+  <!--Hamburg-->
+  <input class="check" type="checkbox" id="hamburger-checkbox">
+  <label class="hamburger" for="hamburger-checkbox">
+      <ion-icon name="menu-outline" class="nav-icon-hamburger"></ion-icon>
+      <ion-icon name="close-outline" class="nav-icon-close"></ion-icon>
+  </label>
+  
+  <nav class="nav-mobile">
+    <ul>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </ul>
+  </nav>
+  <!--Hamburg-->
   <header>
+    
     <h1 class="title">kayla·P</h1>
-    <nav>
+    
+    <nav class="nav-normal">
       <ul>
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -34,6 +53,7 @@
         <a href="#projects">Projects</a>
       </ul>
     </nav>
+
   </header>
   
   <main>
@@ -62,38 +82,40 @@
             <strong>Unweighted GPA: </strong>97.0/100.0
           </p>
         </div>
-  
-        <div class="education-col2">
-          <h3>Clubs</h3>
-          <ul>
-            <li>PAN Asian Club</li>
-            <li>Women in STEM</li>
-            <li>Origami Club</li>
-            <li>Rubik's Cube Club</li>
-            <li>Drone Club</li>
-            <li>Math Club</li>
-          </ul>
-        </div>
-  
-        <div class="education-col3">
-          <h3>Electives</h3>
-          <ul>
-            <li>Falcon Band - Flute (4yrs)</li>
-            <li>Animation 1</li>
-            <li>Web Design</li>
-          </ul>
-        </div>
-  
-        <div class="education-col4">
-          <h3>APs</h3>
-          <ul>
-            <li>Chemistry</li>
-            <li>Computer Science A</li>
-            <li>APUSH</li>
-            <li>Statistics</li>
-            <li>Biology</li>
-            <li>Calculus BC</li>
-          </ul>
+
+        <div class="education-cols">
+          <div class="education-col2">
+            <h3>Clubs</h3>
+            <ul>
+              <li>PAN Asian Club</li>
+              <li>Women in STEM</li>
+              <li>Origami Club</li>
+              <li>Rubik's Cube Club</li>
+              <li>Drone Club</li>
+              <li>Math Club</li>
+            </ul>
+          </div>
+    
+          <div class="education-col3">
+            <h3>Electives</h3>
+            <ul>
+              <li>Falcon Band - Flute (4yrs)</li>
+              <li>Animation 1</li>
+              <li>Web Design</li>
+            </ul>
+          </div>
+    
+          <div class="education-col4">
+            <h3>APs</h3>
+            <ul>
+              <li>Chemistry</li>
+              <li>Computer Science A</li>
+              <li>APUSH</li>
+              <li>Statistics</li>
+              <li>Biology</li>
+              <li>Calculus BC</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -126,6 +148,7 @@
     <section id="skills" class="skills">
       <h2 class="skills-header">Skills</h2>
       <div class="skills-body">
+        
         <div class="skills-col1">
           <div class="skills-general">
             <h3>General</h3>
@@ -135,6 +158,7 @@
               <li>Adaptibility</li>
             </ul>
         </div>
+        
         <div class="skills-col2">
           <div class="skills-CS">
             <h3>CS Skills</h3>
@@ -146,6 +170,7 @@
               <li>VS Code</li>
             </ul>
         </div>
+        
         <div class="skills-col3">
           <div class="skills-lang">
             <h3>Languages</h3>
@@ -155,7 +180,7 @@
               <li>Vietnamese (native)</li>
               <li>French (novice)</li>
             </ul>
-        </div>
+        </div> 
       </div>
     </section>
 
@@ -164,21 +189,22 @@
       <div class="projects-body">
         <div class="scratchGame">
           <h3>Secret Room - Scratch Escape Room (2022)</h3>
-          <iframe src="https://scratch.mit.edu/projects/719788610/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+          <iframe class="scratchGameSrc" src="https://scratch.mit.edu/projects/719788610/embed" allowtransparency="true" width="400" height="315" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
         <div class="bioSong">
           <h3>Biology Song about Genetics (2024)</h3>
-          <iframe class="bioSongVideo" width="560" height="315" src="https://drive.google.com/file/d/1mP9t8GGHHNBwG7FXboycVrdXONJX2HCY/preview" </iframe>
+          <iframe class="bioSongVideo" width="400" height="300" src="https://drive.google.com/file/d/1mP9t8GGHHNBwG7FXboycVrdXONJX2HCY/preview"></iframe>
         </div>
       </div>
     </section>
-
-      
+  
   </main>
-
-  <footer>
-
+  <br>
+  <br>
+  <footer class="copyright">
+    <small>Copyright © 2024 Kayla Phan</small>
   </footer>
+  
 </div>
 </body>
 

@@ -15,16 +15,16 @@ body {
 }
 
 section {
-  padding: 1rem 10rem 2rem 10rem;
+  padding: 1rem 8rem 2rem 8rem;
   margin: -0.5rem;
   scroll-margin-top: 12.2rem;
 }
 h1 {
-  font-size: 3.815rem;
+  font-size: clamp(2.986rem, 0.9716161616161618rem + 5.301010101010101vw, 4.209rem);
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: clamp(2.488rem, 1.1668282828282828rem + 3.4767676767676767vw, 3.157rem);
   text-align: center;
   border-bottom: 3px double black;
   padding: 1rem;
@@ -38,7 +38,7 @@ h2:hover {
 }
 
 h3 {
-  font-size: 1.563rem;
+  font-size: clamp(1.44rem, 1.2426060606060603rem + 2.1878787878787884vw, 1.728rem);
 }
 
 p {
@@ -50,6 +50,51 @@ p {
 li {
   line-height: calc(27/16);
 }
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  left: -10px;
+  z-index: 2;
+  height: 100%;
+  background-color: #74879a;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+.check {
+  position: absolute;
+  left: -500px;
+}
+
+.hamburger {
+  position: fixed;
+  top: 5px;
+  z-index: 3;
+  display: none;
+  font-size: 35px;
+  color: #bfd7ef;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  color: #88a0b9;
+}
+
+.nav-mobile ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-mobile ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
 /* Header */
 header {
   display: flex;
@@ -73,8 +118,6 @@ header {
 
 .title:hover {
   transform: scale(1.1);
-  border-left: 5px double rgba(191, 215, 239, 1);
-  border-right: 5px double rgba(191, 215, 239, 1);
 }
 
 nav ul {
@@ -94,6 +137,7 @@ nav ul a {
   background-color: #5c738a;
   font-size: 1.25rem;
   transition: 0.3s ease-in-out;
+  text-align: center;
 }
 
 nav ul a:hover {
@@ -102,6 +146,7 @@ nav ul a:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(191, 215, 239, 0.3);
 }
+
 /* Header End */
 
 /* Main */
@@ -112,16 +157,22 @@ main p {
   font-size: 1rem;
 }
 
+/* footer */
+footer {
+  align-text: center;
+  display: flex;
+  justify-content: center;
+}
+/* footer end */
+
 /* about */
 .about {
   border: 1px solid #28333e;
   border-radius: 1rem;
-  width: 60%;
-  margin: 2rem auto 5rem auto;
+  margin: 2rem 7rem 5rem 7rem;
+  padding: 1rem;
   background-image: url(images/pfp2.jpg);
   background-size: cover;
-  min-height: 30rem;
-  min-width: 50rem;
   box-shadow: 0px 0px 10px rgba(40,51,62,0.5);
   scroll-margin-top: 15rem;
 }
@@ -162,7 +213,6 @@ main p {
   padding: 0rem 1rem;
   color: #4b5258;
 }
-
 /* about end */
 
 /* education */
@@ -170,6 +220,7 @@ main p {
   background-color: #bfd7ef;
   background-image: linear-gradient(90deg, rgba(177, 200, 240, 0.95) 0%, rgba(177, 200, 240, 0.8) 100%), url(images/sunsetMountains.jpg);
   background-size: cover;
+  padding: 1rem 3rem 2rem 3rem;
 }
 
 .education-header {
@@ -177,10 +228,11 @@ main p {
 }
 
 .education-body {
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin: 2rem 0;
+  gap: 5rem;
+  justify-content: center;
 }
 
 .education-col1 {
@@ -190,6 +242,12 @@ main p {
   border-radius: 5%;
   height: 15rem;
   box-shadow: 0px 0px 15px rgba(40,51,62,0.5);
+}
+
+.education-cols {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 /* education end */
 
@@ -260,10 +318,12 @@ main p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   background-color: #b0c9e3;
-  padding: 1rem;
   margin: 1rem;
+  padding: 1rem;
+  width: 30rem;
 }
 
 .bioSongVideo {
@@ -271,6 +331,292 @@ main p {
 }
 /* projects end */
 /* Main End */
-footer {
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #637588;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1f2733;
+  border-radius: 10px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  section {
+    scroll-margin-top: 12rem;
+    padding: 2rem;
+  }
   
+  /* about */
+  .about {
+    margin: 2rem;
+    padding: 1rem;
+    scroll-margin-top: 15rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me-body {
+    width: 60%;
+    margin: 1rem 0rem 1rem -5rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .welcome {
+    text-align: start;
+  }
+
+  .about-icons-body {
+    width: 12rem;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  /* about end */
+
+  /* education */
+  .education-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .education-cols {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .education-col2, .education-col3, .education-col4 {
+    text-align: start;
+  }
+  /* education end */
+  
+  /* experience */
+  .experience {
+    padding: 2rem 3rem 3rem 3rem;
+  }
+
+  .E1T1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .E1T1 h3 {
+    margin: 2rem 0 0 0;
+  }
+  /* experience end */
+  
+  /* skills */
+  .skills-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .skills-col1, .skills-col2, .skills-col3 {
+    display: flex;
+    flex-direction: column-wrap;
+    justify-content: start;
+    width: 25rem;
+  }
+  /* skill end */
+
+  /* projects */
+  .projects-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scratchGame, .bioSong {
+    width: 25rem;
+  }
+  
+  .scratchGameSrc {
+    width: 25rem;
+    height: 20rem;
+  }
+  .bioSongVideo {
+    width: 20rem;
+    height: 13.3rem;
+  }
+  /* projects end */
+}
+
+@media (max-width: 800px) {
+  .nav-normal {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-icon-hamburger {
+    display: block;
+  }
+
+  .nav-icon-close {
+    display: none;
+  }
+
+  .check:checked {
+    scroll-behavior: none;
+  }
+  
+  .check:checked ~ .hamburger .nav-icon-hamburger {
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .check:checked ~ .hamburger .nav-icon-close {
+    display: block;
+    font-size: 20px;
+    color: black;
+  }
+
+  .check:checked ~ .nav-mobile {
+    display: block;
+  }
+
+  section {
+    scroll-margin-top: 6rem;
+    padding: 2rem;
+  }
+
+  h2:hover {
+    width: 20rem;
+  }
+  
+  /* about */
+  .about {
+    margin: 2rem 0 5rem 0;
+    padding: 1rem;
+    scroll-margin-top: 15rem;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me-body {
+    width: 90%;
+    margin: 0rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .welcome {
+    text-align: center;
+    margin-bottom: 0rem;
+  }
+
+  .about-icons-body {
+    width: 12rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  /* about end */
+  
+  /* education */
+  .education-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .education-col1 {
+    border: 1px solid black;
+    background-color: rgba(240, 236, 249, 0.5);
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border-radius: 5%;
+    height: 15rem;
+    box-shadow: 0px 0px 15px rgba(40,51,62,0.5);
+  }
+
+  .education-cols {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education-cols h3, .education-cols ul {
+    margin: 0;
+  }
+  .education-col2, .education-col3, .education-col4 {
+    text-align: start;
+  }
+  /* education end */
+  
+  /* skills */
+  .skills-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .skills h3 {
+    margin: 1rem;
+  }
+  
+  .skills-lang, .skills-general, .skills-CS {
+    padding: 0 0.5rem;
+    margin: 0;
+  }
+  
+  .skills-col1, .skills-col2, .skills-col3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 20rem;
+  }
+  /* skill end */
+}
+
+
+/* mobile */
+@media (max-width: 480px) {
+  h2:hover {
+    width: 15rem;
+  }
+  
+  /* projects */
+  .scratchGame, .bioSong {
+    width: 20rem;
+  }
+  
+  .scratchGameSrc {
+    width: 20rem;
+    height: 20rem;
+  }
+  
+  .bioSongVideo {
+    width: 15rem;
+    height: 10rem;
+  }
+  /* projects end */
 }
